@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MemphisFont">
+        <attr name="fontType" format="string" >
+            <enum name="bold" value="0"/>
+            <enum name="bold-italic" value="1"/>
+            <enum name="extra-bold" value="2"/>
+            <enum name="light" value="3"/>
+            <enum name="light-italic" value="4"/>
+            <enum name="medium" value="5"/>
+            <enum name="medium-italic" value="6"/>
+        </attr>
+    </declare-styleable>
+</resources>

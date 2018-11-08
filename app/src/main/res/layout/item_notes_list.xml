@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="top"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/_8sdp"
+    android:paddingRight="@dimen/_8sdp">
+
+    <View
+        android:id="@+id/view_note_bar"
+        android:layout_width="15dp"
+        android:layout_height="1.5dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorPrimary" />
+
+    <com.hellodemo.ui.MemphisEditTextView
+        android:id="@+id/edttxt_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:imeOptions="actionDone"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingTop="14dp"
+        android:text="Hello"
+        android:textColor="@color/edit_text_color"
+        android:textSize="16sp"
+        custom:fontType="light" />
+
+</LinearLayout>

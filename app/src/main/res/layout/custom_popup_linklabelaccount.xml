@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/label" />
+
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/textViewNombreVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:gravity="center"
+            android:padding="7sp"
+            android:text="Link a Label Account"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="@color/colorPrimaryBlack"
+            android:textColorLink="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="25dp"
+            android:text=" LABEL ACCOUNT EMAIL"
+            android:textColor="#2a2d34"
+            android:textSize="12sp" />
+
+        <com.hellodemo.ui.MemphisEditTextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_border"
+            android:hint=" Enter the label's account email.."
+            android:padding="12sp"
+            android:textColor="#2a2d34"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:weightSum="2">
+
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/Cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="12sp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/md_black_1000_50"
+                android:textSize="12sp" />
+
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/Save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="12sp"
+                android:text="Link"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

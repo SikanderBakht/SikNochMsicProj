@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/music_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/music_player2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_125sdp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/player_ticker_title"
+            style="@style/music_title_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:maxLines="1"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_shuffle"
+            style="@style/player_button_style"
+            android:scaleX="-1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="onShuffle"
+            android:padding="15dp"
+            app:srcCompat="@drawable/player_shuffle_selector" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:padding="14dp"
+            style="@style/player_button_style"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/player_ticker_play_pause_image"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/image_shuffle"
+            app:srcCompat="@drawable/player_back_track"
+            android:onClick="onPlayBack"/>
+
+        <ImageView
+            android:id="@+id/player_ticker_play_pause_image"
+            style="@style/player_button_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:srcCompat="@drawable/player_big_play_active"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="onPlayPause"/>
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:padding="14dp"
+            style="@style/player_button_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_repeat"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toEndOf="@+id/player_ticker_play_pause_image"
+            app:srcCompat="@drawable/player_forward_track"
+            android:onClick="onPlayNext"/>
+
+        <ImageView
+            android:id="@+id/image_repeat"
+            style="@style/player_button_style"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toEndOf="@+id/imageView13"
+            android:padding="15dp"
+            app:srcCompat="@drawable/player_repeat_selector"
+            android:onClick="onRepeat"/>
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/player_ticker_elapsed_time"
+            style="@style/player_time_style"
+            android:text="00:00"
+            app:layout_constraintBottom_toTopOf="@+id/image_shuffle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_ticker_title"
+            app:layout_constraintVertical_bias="0.8" />
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/player_ticker_total_time"
+            style="@style/player_time_style"
+            android:text="00:00"
+            app:layout_constraintBottom_toTopOf="@+id/image_repeat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_ticker_title"
+            app:layout_constraintVertical_bias="0.8" />
+
+        <SeekBar
+            android:id="@+id/player_ticker_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:progress="0"
+            android:secondaryProgressTint="@color/txt_primary"
+            app:layout_constraintBottom_toTopOf="@+id/player_ticker_play_pause_image"
+            app:layout_constraintEnd_toStartOf="@+id/player_ticker_total_time"
+            app:layout_constraintStart_toEndOf="@+id/player_ticker_elapsed_time"
+            app:layout_constraintTop_toBottomOf="@+id/player_ticker_title"
+            app:layout_constraintVertical_bias="0.65" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

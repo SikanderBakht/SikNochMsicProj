@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/write_new_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_add_white_18dp"
+        android:drawableTint="@color/colorPrimary"
+        android:gravity="center"
+        android:onClick="onSendMusicButtonClicked"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/write_a_note"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+</LinearLayout>

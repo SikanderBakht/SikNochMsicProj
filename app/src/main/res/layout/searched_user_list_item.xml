@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/recycler_view_list_item_image"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_8sdp"
+        android:src="@drawable/profile"
+        app:civ_border_width="0dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#ffffff"
+        app:civ_shadow_radius="0"
+        app:srcCompat="@drawable/profile" />
+
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/artist_label_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/action_button"
+        android:layout_toEndOf="@id/recycler_view_list_item_image"
+        android:padding="@dimen/_8sdp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Ray Mingus the first of his name and the last of his family" />
+
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/action_button"
+        android:layout_width="70sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@drawable/rounded_rectangle_primary"
+        android:gravity="center"
+        android:paddingBottom="4sp"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:paddingTop="4sp"
+        android:text="Action"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/txt_secondary" />
+</RelativeLayout>

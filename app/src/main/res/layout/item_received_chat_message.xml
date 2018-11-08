@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/avatar_image"
+        android:layout_width="@dimen/_31sdp"
+        android:layout_height="@dimen/_31sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/profile"
+        app:civ_border_color="@color/color_selector"
+        app:civ_border_width="0dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#ffffff"
+        app:civ_shadow_radius="0"
+        app:srcCompat="@drawable/profile" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_47sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_toEndOf="@+id/avatar_image">
+        <RelativeLayout
+            android:id="@+id/message_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/_200sdp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/round_corner_light_grey_color_bg"
+                android:padding="@dimen/_8sdp"
+                android:text="sup dude?"
+                android:autoLink="web"
+                android:textColor="@color/colorPrimaryBlack" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="-4dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/left_message_triangle"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/msg_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/message_view"
+            android:layout_below="@id/message_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp">
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/timestamp_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message Timestamp"
+                android:textSize="@dimen/_7sdp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

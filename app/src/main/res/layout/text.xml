@@ -1,0 +1,37 @@
+<LinearLayout android:id="@+id/right_wrapper"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/delete"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@color/color_delete_bg">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            style="@style/music_recycler_view_list_item_btn_image"
+            android:layout_marginBottom="8dp"
+            android:text="Skrilex and Dipplo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002"
+            app:srcCompat="@drawable/ic_favorite_border_white_18dp" />
+
+        <com.hellodemo.ui.MemphisTextView
+            android:layout_marginTop="4dp"
+            style="@style/music_recycler_view_item_btn"
+            custom:fontType="light"
+            android:text="@string/delete"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

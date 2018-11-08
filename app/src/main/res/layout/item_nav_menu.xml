@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nav_bg_selector"
+    android:paddingBottom="@dimen/_12sdp"
+    android:paddingLeft="@dimen/_36sdp"
+    android:paddingTop="@dimen/_12sdp">
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/nav_title_color"
+        android:textSize="@dimen/nav_item_title_size"
+        android:text="@string/inbox"
+        custom:fontType="medium" />
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/screen_nav_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_4sdp"
+        android:textColor="@color/nav_count_color"
+        android:text=""
+        android:textSize="@dimen/nav_item_subtitle_size"
+        custom:fontType="light" />
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/unread_messages_dot"
+        android:layout_width="@dimen/_4sdp"
+        android:layout_height="@dimen/_4sdp"
+        android:background="@drawable/circle_drawable"
+        android:gravity="top"
+        android:layout_gravity="top"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+</LinearLayout>

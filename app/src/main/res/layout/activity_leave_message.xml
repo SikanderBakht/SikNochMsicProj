@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hellodemo.LeaveMessageActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/fragment_content1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:text="@string/leave_a_message"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_leave_message"
+            style="@style/Widget.AppCompat.EditText.HrlloDemoEditText"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:gravity="start"
+            android:hint="@string/leave_a_message_with_your_track"
+            app:layout_constraintBottom_toTopOf="@+id/txt_send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/txt_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/sen_btn_selector"
+            android:gravity="center"
+            android:onClick="onSendMusicButtonClicked"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_leave_message"
+            app:layout_constraintStart_toEndOf="@+id/txt_cancel" />
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="@color/btn_disable"
+            android:gravity="center"
+            android:onClick="onCancel"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_send"
+            app:layout_constraintEnd_toStartOf="@+id/txt_send"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#a1a1a1"
+        android:paddingBottom="50dp">
+
+        <ImageView
+            android:id="@+id/loading_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/loader_animation" />
+    </RelativeLayout>
+</RelativeLayout>

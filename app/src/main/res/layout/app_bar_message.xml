@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            app:contentInsetLeft="0dp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:contentInsetStart="0dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/notification_avatar"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile"
+                    app:civ_border_width="0dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_color="#ffffff"
+                    app:civ_shadow_radius="0" />
+
+                <com.hellodemo.ui.MemphisTextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="@string/messages"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:layout_centerInParent="true"/>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    <include layout="@layout/content_main_message" />
+
+</LinearLayout>

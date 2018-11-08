@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
+
+    <group
+        android:name="circle">
+
+        <path
+            android:fillColor="@color/white"
+            android:pathData="M 50 49.3022 C 55.5228474983 49.3022 60 53.7793525017 60 59.3022 C 60 64.8250474983 55.5228474983 69.3022 50 69.3022 C 44.4771525017 69.3022 40 64.8250474983 40 59.3022 C 40 53.7793525017 44.4771525017 49.3022 50 49.3022 Z" />
+    </group>
+</vector>

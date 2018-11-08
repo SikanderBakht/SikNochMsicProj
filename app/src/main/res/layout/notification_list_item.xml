@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/surface_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/music_recycler_view_list_item_bg_image"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/image_white"
+        android:visibility="invisible"
+        app:civ_border="true"
+        app:civ_border_color="@color/color_delete_bg"
+        app:civ_border_width="@dimen/_2sdp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#ffffff"
+        app:civ_shadow_radius="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/notification_avatar"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:src="@drawable/profile"
+        app:civ_border="true"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="@dimen/_3sdp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#ffffff"
+        app:civ_shadow_radius="0"
+        app:layout_constraintBottom_toBottomOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintEnd_toEndOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintStart_toEndOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintStart_toStartOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintTop_toTopOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintVertical_bias="0.45"
+        app:srcCompat="@drawable/profile" />
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/notification_group_name_first_letter"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/black_circle_drawable"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintEnd_toEndOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintStart_toEndOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintStart_toStartOf="@+id/music_recycler_view_list_item_bg_image"
+        app:layout_constraintTop_toTopOf="@+id/music_recycler_view_list_item_bg_image" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/notification_avatar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/notification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="The Sad but true "
+            android:textColor="@color/colorPrimaryBlack"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+
+            android:id="@+id/constraintLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/notification_text"
+            app:layout_constraintTop_toBottomOf="@+id/notification_text">
+
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/notification_subtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Dipplo"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/orange_accept_button_bg"
+                android:gravity="center"
+                android:paddingBottom="2sp"
+                android:paddingLeft="5sp"
+                android:paddingRight="5sp"
+                android:paddingTop="2sp"
+                android:text="Accept"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/notification_subtext"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/decline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/accept"
+                android:background="@drawable/white_decline_button_bg"
+                android:gravity="center"
+                android:paddingBottom="2sp"
+                android:paddingLeft="5sp"
+                android:paddingRight="5sp"
+                android:paddingTop="2sp"
+                android:text="Decline"
+                android:textAllCaps="false"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/accept"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/txt_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

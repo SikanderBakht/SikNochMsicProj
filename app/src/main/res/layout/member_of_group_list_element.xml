@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/member_recycler_view_swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:clickToClose="true">
+
+
+
+    <!-- Left Side Slide Elements-->
+    <LinearLayout
+        android:id="@+id/left_wrapper"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/delete"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent"
+            android:background="@color/color_delete_bg">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                style="@style/music_recycler_view_list_item_btn_image"
+                android:layout_marginBottom="8dp"
+                android:text="Skrilex and Dipplo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35000002"
+                app:srcCompat="@drawable/item_delete" />
+
+            <com.hellodemo.ui.MemphisTextView
+                style="@style/music_recycler_view_item_btn"
+                custom:fontType="light"
+                android:text="@string/delete"
+                android:paddingTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                app:layout_constraintStart_toStartOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+    <!-- / Left Side Slide Elements-->
+
+
+    <!--Right Side Slide Elements-->
+    <LinearLayout
+        android:id="@+id/right_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!--Message Button-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/message"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent"
+            android:background="@color/color_message_bg">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                style="@style/music_recycler_view_list_item_btn_image"
+                android:layout_marginBottom="6dp"
+                android:text="Skrilex and Dipplo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35000002"
+                app:srcCompat="@drawable/ic_msg" />
+
+            <com.hellodemo.ui.MemphisTextView
+                style="@style/music_recycler_view_item_btn"
+                custom:fontType="light"
+                android:text="@string/message"
+                app:layout_constraintEnd_toEndOf="@+id/imageView8"
+                app:layout_constraintStart_toStartOf="@+id/imageView8"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+    <!-- / Right Side Slide Elements-->
+
+
+
+    <!--Main List Item View-->
+    <RelativeLayout
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:src="@drawable/profile"
+            app:civ_border_width="0dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#ffffff"
+            app:civ_shadow_radius="0"
+            app:srcCompat="@drawable/profile" />
+
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/avatar_image"
+            android:button="@null"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/message" />
+
+        <com.hellodemo.ui.MemphisTextView
+            android:id="@+id/admin_string"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/contact_name"
+            android:button="@null"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/admin"
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible"/>
+
+        <com.hellodemo.ui.MemphisCheckBox
+            android:id="@+id/contact_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/avatar_image"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/txt_secondary" />
+    </RelativeLayout>
+    <!-- / Main List Item View-->
+
+</com.daimajia.swipe.SwipeLayout>

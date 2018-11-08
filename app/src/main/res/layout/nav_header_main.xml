@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    <ImageView
+        android:id="@+id/img_nav_back"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_left_arrow" />
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/label_first_letter"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_below="@id/img_nav_back"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textAllCaps="true"
+        android:background="@drawable/black_circle_drawable"/>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/img_nav_profile"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_below="@id/img_nav_back"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/profile"
+        android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+        app:civ_border_width="0dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#acacac"
+        app:civ_shadow_radius="5" />
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/txt_nav_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_nav_profile"
+        android:layout_alignTop="@id/img_nav_profile"
+        android:layout_below="@id/img_nav_profile"
+        android:layout_toRightOf="@id/img_nav_profile"
+        android:gravity="center_vertical"
+        android:text="John Smith"
+        android:textColor="@color/txt_primary"
+        android:textSize="@dimen/nav_name_txt_size"
+        android:visibility="invisible"
+        custom:fontType="medium" />
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/txt_nav_notif_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_nav_profile"
+        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+        android:layout_toRightOf="@id/img_nav_back"
+        android:text="34"
+        android:textColor="@color/txt_primary"
+        android:textSize="@dimen/nav_notif_txt_size"
+        android:visibility="invisible"
+        custom:fontType="medium" />
+
+    <View
+        android:id="@+id/view_nav_notif_highlight"
+        android:layout_width="@dimen/_4sdp"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_alignTop="@+id/txt_nav_notif_count"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_toRightOf="@id/txt_nav_notif_count"
+        android:background="@drawable/circle_drawable"
+        android:visibility="invisible" />
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/txt_nav_newdemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_nav_notif_count"
+        android:layout_alignBottom="@id/txt_nav_notif_count"
+        android:layout_toRightOf="@id/view_nav_notif_highlight"
+        android:text="new demos"
+        android:textColor="@color/txt_secondary"
+        android:visibility="gone"
+        custom:fontType="medium" />
+
+    <ImageView
+        android:id="@+id/img_txt_logo"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@id/txt_nav_notif_count"
+        android:layout_below="@id/img_nav_profile"
+        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/hello_demo_text_logo"
+        android:visibility="visible" />
+
+</RelativeLayout>

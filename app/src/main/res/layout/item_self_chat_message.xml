@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_toStartOf="@+id/avatar_image">
+
+        <RelativeLayout
+            android:id="@+id/error_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/message_view"
+            android:layout_below="@id/message_view"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/alert_icon"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/alert" />
+
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/sending_failed_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/alert_icon"
+                android:text="Failed to send. Tap to retry."
+                android:textColor="#dd0000"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/msg_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/message_view"
+            android:layout_below="@id/message_view"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp">
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/timestamp_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message Timestamp"
+                android:textSize="@dimen/_7sdp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/message_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/msg_seen"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_toLeftOf="@id/message_text"
+                android:layout_alignBottom="@id/message_text"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@drawable/msg_seen"
+                />
+
+            <com.hellodemo.ui.MemphisTextView
+                android:id="@+id/message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/_200sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/round_corner_primary_color_bg"
+                android:padding="@dimen/_8sdp"
+                android:text="sup dude"
+                android:autoLink="web"
+                android:textColorLink="@color/text_color_primary"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-18dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/right_message_triangle" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/avatar_image"
+        android:layout_width="@dimen/_31sdp"
+        android:layout_height="@dimen/_31sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/profile"
+        app:civ_border_color="@color/color_selector"
+        app:civ_border_width="0dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#ffffff"
+        app:civ_shadow_radius="0"
+        app:srcCompat="@drawable/profile" />
+
+</RelativeLayout>

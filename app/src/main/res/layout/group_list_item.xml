@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.hellodemo.ui.MemphisTextView
+        android:id="@+id/group_name_first_letter"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textAllCaps="true"
+        android:background="@drawable/black_circle_drawable"/>
+
+
+    <com.hellodemo.ui.MemphisCheckBox
+        android:id="@+id/group_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_toEndOf="@+id/group_name_first_letter"
+        android:button="@null"
+        android:layout_centerVertical="true"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/message" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/txt_secondary" />
+</RelativeLayout>
